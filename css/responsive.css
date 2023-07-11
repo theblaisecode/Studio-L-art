@@ -1,0 +1,1575 @@
+/* ---------------------------------- Responsive Media Queries---------------------------------- */
+
+/******************************************
+/* Smartphone
+/*******************************************/
+@media screen and (max-width: 993px) {
+   .mobile-menu-icon,
+   .mobile #logo {
+      display: block;
+   }
+
+   .contentBottom {
+      width: 100%;
+   }
+
+   .navbar {
+      position: absolute;
+      top: 0%;
+      right: 100%;
+      z-index: 2;
+      /* right: -100%; */
+      width: 25rem;
+      height: 100%;
+      background: #c7a56b;
+      display: flex;
+      flex-direction: column;
+      padding: 8rem 2rem;
+      transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+      overflow: auto;
+   }
+
+   body[data-theme="dark"] .navbar {
+      background: var(--bgDarkAccent);
+   }
+
+   .navbar li {
+      padding: 2.5rem 1.8rem;
+      display: block;
+      width: 100%;
+      text-align: left;
+   }
+
+   .navbar li#logo {
+      display: none;
+      font-size: calc(0.8rem + 3vw);
+   }
+
+   .mobile #logo a {
+      font-size: calc(2rem + 3vw);
+   }
+
+   .darkTheme {
+      margin: 2rem 0 0 2rem;
+      align-self: flex-start;
+   }
+
+   .open-menu {
+      right: 0;
+      transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+   }
+
+   .headerContent ul {
+      justify-content: flex-start;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width: 575px) and (min-height: 575px) {
+   .container2 {
+      width: 90%;
+   }
+
+   /* ---------------------- Header ---------------------- */
+   header {
+      padding: 2rem 0;
+   }
+
+   #hero {
+      padding: 10rem 0 15rem 0;
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(3rem + 3vw);
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -14rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      margin: -2.5rem auto 0 auto;
+      width: 70%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 10rem 0 0 0;
+      font-size: calc(1.2rem + 0.075vw);
+   }
+
+   /* ---------------------- Section: About ---------------------- */
+   #about {
+      margin: 4rem 0;
+   }
+
+   .aboutContent,
+   .masterpieceContent {
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .lead {
+      font-size: calc(1.2rem + 11.3vw);
+      line-height: 6rem;
+   }
+
+   /* Content Bottem */
+   .headingP {
+      font-size: calc(1.2rem + 0.085vw);
+      margin-bottom: 1rem;
+   }
+
+   .largeP {
+      font-size: calc(1.2rem + 3vw);
+      letter-spacing: 0rem;
+      word-spacing: 0.3rem;
+   }
+
+   /* ---------------------- Section: Gallery Styling ---------------------- */
+   .galleryContent {
+      margin: 0;
+      flex-direction: column;
+   }
+
+   .galleryContent h3 {
+      line-height: 5rem;
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .box {
+      margin-bottom: 6rem;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 0;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 9.5%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 4%;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 0rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 100%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Workshop ---------------------- */
+   /* Large image after hero */
+   .worhshopContent {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 0;
+   }
+
+   .worhshopContent .contentBottom {
+      margin-top: 5rem;
+   }
+
+   /* ---------------------- Section: Celebrate ---------------------- */
+   .celebrateContent .contentBottom .imgGallery .box img,
+   .celebrateContent .contentBottom .imgGallery2 .box img {
+      width: 16rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:first-child img {
+      margin: 6rem 0 0 0;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+      margin: -7rem 0 0 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+      margin: -6rem 0 0 0;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+      margin: -6.2rem 0 0 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+      margin: 4rem 0 0 -4.5rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+      margin: 0.5rem 0 3rem -3rem;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(2rem + 4vw);
+      line-height: 4.6rem;
+      margin: auto 0;
+   }
+
+   .visitUsContent .btn {
+      margin-top: 2rem;
+      padding: 2rem 4rem;
+      font-size: calc(1.2rem + 0.75vw);
+   }
+
+   #footer h2 a {
+      font-size: calc(5rem + 2vw);
+      word-spacing: 1rem;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer ---------------------- */
+   .subFooterContent,
+   .subFooterContent .contentBottom {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   .social li {
+      padding: 0 2rem 2rem 2rem;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 100%;
+   }
+
+   /* ---------------------------------- Scroll to Top ---------------------------------- */
+   .scroll-top {
+      right: 2rem;
+      font-size: 3rem;
+   }
+   .scroll-active {
+      bottom: 13rem;
+   }
+}
+
+@media (min-width: 450px) and (max-width: 500px) and (min-height: 500px) {
+   /* ---------------------- Hero ---------------------- */
+
+   #hero {
+      padding: 10rem 0 15rem 0;
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -14rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      width: 60%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 10rem 4rem 0 4rem;
+   }
+
+   .galleryContent .box {
+      margin-bottom: 9rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -7%;
+   }
+}
+
+@media (min-width: 501px) and (max-width: 575px) and (min-height: 575px) {
+   /* ---------------------- Hero ---------------------- */
+
+   #hero {
+      padding: 10rem 0 15rem 0;
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -16.5rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      width: 60%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 11rem 4rem 0 4rem;
+   }
+
+   .subFooter2Content .contentTop {
+      width: 85%;
+   }
+
+   .galleryContent .box {
+      margin-bottom: 9rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -8%;
+   }
+}
+
+/******************************************
+/* Tablet
+/*******************************************/
+@media (min-width: 576px) and (max-width: 768px) {
+   .container2 {
+      width: 90%;
+   }
+
+   /* ---------------------- Header ---------------------- */
+   header {
+      padding: 2rem 0;
+   }
+
+   .mobile #logo a {
+      font-size: calc(2.5rem + 3vw);
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(4.5rem + 3vw);
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -22.5rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      margin: -3.5rem auto 0 auto;
+      width: 77%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 14rem 5rem 0 5rem;
+      font-size: calc(1.2rem + 0.075vw);
+   }
+
+   /* ---------------------- Section: About ---------------------- */
+   #about {
+      margin: 4rem 0;
+   }
+
+   .aboutContent,
+   .masterpieceContent {
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .aboutContent .contentTop h2,
+   .masterpieceContent .contentTop h2 {
+      margin-bottom: 4rem;
+   }
+
+   .lead {
+      font-size: calc(2rem + 10vw);
+      line-height: 9rem;
+   }
+
+   /* Content Bottem */
+   .headingP {
+      font-size: calc(1.2rem + 0.085vw);
+      margin-bottom: 1rem;
+   }
+
+   .largeP {
+      font-size: calc(1.2rem + 3vw);
+      letter-spacing: 0rem;
+      word-spacing: 0.3rem;
+   }
+
+   /* ---------------------- Section: Gallery Styling ---------------------- */
+   .galleryContent {
+      margin: 0;
+      flex-direction: column;
+   }
+
+   .galleryContent h3 {
+      line-height: 7rem;
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .box {
+      margin-bottom: 12rem;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 9.6rem;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 15%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 10%;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 0rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 100%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -9%;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      bottom: -9%;
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Workshop ---------------------- */
+   /* Large image after hero */
+   .worhshopContent {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 0;
+   }
+
+   .worhshopContent .contentBottom,
+   .worhshopContent .contentTop p {
+      margin-top: 5rem;
+   }
+
+   /* ---------------------- Section: Celebrate ---------------------- */
+   .celebrateContent .contentBottom .imgGallery .box img,
+   .celebrateContent .contentBottom .imgGallery2 .box img {
+      width: 25rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:first-child img {
+      margin: 6rem 0 0 0;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+      margin: -7rem 0 0 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+      margin: -6rem 0 0 0;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+      margin: -6.2rem 0 0 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+      margin: 4rem 0 0 -4.5rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+      margin: 0.5rem 0 3rem -3rem;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(3rem + 4vw);
+      line-height: 4.6rem;
+      margin: auto 0;
+   }
+
+   .visitUsContent .btn {
+      margin-top: 4rem;
+      padding: 2rem 4rem;
+      font-size: calc(1.8rem + 0.75vw);
+   }
+
+   #footer h2 a {
+      font-size: calc(9rem + 1vw);
+      word-spacing: 0;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer ---------------------- */
+   .subFooterContent,
+   .subFooterContent .contentBottom {
+      align-items: center;
+      justify-content: center;
+      font-size: calc(0.8rem + 0.81vw);
+      /* flex-direction: column; */
+   }
+
+   .subFooterContent .contentTop {
+      flex: 1.4;
+   }
+
+   .subFooterContent .contentBottom {
+      flex: 1.5;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .social li {
+      padding: 0 1rem 0 1rem;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 70%;
+   }
+
+   /* ---------------------------------- Scroll to Top ---------------------------------- */
+   .scroll-top {
+      right: 2rem;
+      font-size: 3rem;
+   }
+   .scroll-active {
+      bottom: 13rem;
+   }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+   .container2 {
+      width: 90%;
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(4.5rem + 3vw);
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -29.5rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      margin: -3.5rem auto 0 auto;
+      width: 75%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 21rem 13rem 0 13rem;
+      font-size: calc(1.3rem + 0.075vw);
+   }
+
+   /* ---------------------- Section: About ---------------------- */
+   #about {
+      margin: 5rem 0;
+   }
+
+   .aboutContent,
+   .masterpieceContent {
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .aboutContent .contentTop h2,
+   .masterpieceContent .contentTop h2 {
+      margin-bottom: 4rem;
+   }
+
+   .lead {
+      font-size: calc(2rem + 8.9vw);
+      line-height: 12rem;
+   }
+
+   /* ---------------------- Section: Gallery Styling ---------------------- */
+   .galleryContent {
+      margin: 0;
+      flex-direction: column;
+   }
+
+   .galleryContent h3 {
+      line-height: 7rem;
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .box {
+      margin-bottom: 15rem;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 0;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 15%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 10%;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 0rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 100%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -9%;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      bottom: -9%;
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Workshop ---------------------- */
+   /* Large image after hero */
+   .worhshopContent {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 0;
+   }
+
+   .worhshopContent .contentBottom,
+   .worhshopContent .contentTop p {
+      margin-top: 5rem;
+   }
+
+   /* ---------------------- Section: Celebrate ---------------------- */
+   .celebrateContent .contentBottom .imgGallery .box img,
+   .celebrateContent .contentBottom .imgGallery2 .box img {
+      width: 30rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:first-child img {
+      margin: 6rem 0 0 0;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+      margin: -13rem 0 0 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+      margin: -11rem 0 0 0;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+      margin: -11.2rem 0 0 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+      margin: 4rem 0 0 -4.5rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+      margin: 0.5rem 0 3rem -3rem;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(3rem + 6vw);
+      line-height: 8rem;
+      margin: auto 0;
+   }
+
+   .visitUsContent .btn {
+      margin-top: 4rem;
+      padding: 2rem 4rem;
+      font-size: calc(1.8rem + 0.75vw);
+   }
+
+   #footer h2 a {
+      font-size: calc(11rem + 1vw);
+      word-spacing: 0;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer ---------------------- */
+   .subFooterContent,
+   .subFooterContent .contentBottom {
+      align-items: center;
+      justify-content: center;
+      font-size: calc(0.8rem + 0.81vw);
+      /* flex-direction: column; */
+   }
+
+   .subFooterContent .contentTop {
+      flex: 1.4;
+   }
+
+   .subFooterContent .contentBottom {
+      flex: 1.5;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .social li {
+      padding: 0 1rem 0 1rem;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 60%;
+   }
+
+   /* ---------------------------------- Scroll to Top ---------------------------------- */
+   .scroll-top {
+      right: 2rem;
+      font-size: 3rem;
+   }
+   .scroll-active {
+      bottom: 13rem;
+   }
+}
+
+/******************************************
+/* Small Desktops
+/*******************************************/
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+   .container {
+      margin: auto;
+      width: 95%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 90%;
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(4.5rem + 4vw);
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -33rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      margin: -5rem auto 0 auto;
+      width: 60%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 27rem 29rem 0 29rem;
+      font-size: calc(1.3rem + 0.182vw);
+   }
+
+   .lead {
+      font-size: calc(2rem + 6vw);
+      line-height: 12rem;
+   }
+
+   .galleryContent {
+      margin: 0 0 0 4rem;
+      gap: 2rem;
+   }
+   .galleryContent h3 {
+      line-height: 7rem;
+      font-size: calc(3rem + 4.5vw);
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 0;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 22%;
+      margin-left: 0;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 6%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 0;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 8rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 85%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -9%;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      bottom: -9%;
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Workshop ---------------------- */
+   /* Large image after hero */
+   #worhshop {
+      margin-top: 4rem;
+   }
+
+   .worhshopContent {
+      padding: 2rem 0;
+   }
+
+   /* ---------------------- Section: Celebrate ---------------------- */
+   .celebrateContent .contentBottom {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box {
+      width: 40%;
+      position: relative;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box {
+      width: 40%;
+      position: relative;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box img {
+      width: 45rem;
+      text-align: center;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:first-child img {
+      margin: 8rem 0 0 3rem;
+      /* position: absolute;
+   top: 4%; */
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+      margin: -19rem 0 0 15rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+      margin: -12rem 0 0 3rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+      margin: -18rem 0 0 8rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+      margin: 4rem 0 3rem -13rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+      margin: -2.5rem 0 0 -1rem;
+      width: 40rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box img {
+      width: 50rem;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(3rem + 6vw);
+      line-height: 8rem;
+      margin: auto 0;
+   }
+
+   .visitUsContent .btn {
+      margin-top: 8rem;
+      padding: 4rem 8rem;
+      font-size: calc(1.8rem + 1.75vw);
+   }
+
+   #footer h2 a {
+      font-size: calc(11rem + 5vw);
+      word-spacing: 0;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer ---------------------- */
+   .subFooterContent,
+   .subFooterContent .contentBottom {
+      align-items: center;
+      justify-content: center;
+      font-size: calc(0.8rem + 0.81vw);
+      /* flex-direction: column; */
+   }
+
+   .subFooterContent .contentTop {
+      flex: 1.4;
+   }
+
+   .subFooterContent .contentBottom {
+      flex: 1.5;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .social li {
+      padding: 0 1rem 0 1rem;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 60%;
+   }
+}
+
+/******************************************
+/* Medium Desktops
+/*******************************************/
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+   .container {
+      margin: auto;
+      width: 95%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 90%;
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(4.5rem + 4vw);
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -40rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      margin: -5rem auto 0 auto;
+      width: 60%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 27rem 29rem 0 29rem;
+      font-size: calc(1.3rem + 0.182vw);
+   }
+
+   .lead {
+      font-size: calc(2rem + 6vw);
+      line-height: 12rem;
+   }
+
+   .galleryContent {
+      margin: 0 0 0 4rem;
+      gap: 2rem;
+   }
+   .galleryContent h3 {
+      line-height: 7rem;
+      font-size: calc(3rem + 4.5vw);
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 0;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 22%;
+      margin-left: 0;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 6%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 0;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 8rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 85%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -9%;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      bottom: -9%;
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Workshop ---------------------- */
+   /* Large image after hero */
+   #worhshop {
+      margin-top: 4rem;
+   }
+
+   .worhshopContent {
+      padding: 2rem 0;
+   }
+
+   /* ---------------------- Section: Celebrate ---------------------- */
+   .celebrateContent .contentBottom {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box {
+      width: 40%;
+      position: relative;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box {
+      width: 40%;
+      position: relative;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box img {
+      width: 45rem;
+      text-align: center;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:first-child img {
+      margin: 8rem 0 0 3rem;
+      /* position: absolute;
+   top: 4%; */
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+      margin: -19rem 0 0 15rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+      margin: -12rem 0 0 3rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+      margin: -18rem 0 0 8rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+      margin: 4rem 0 3rem -13rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+      margin: -2.5rem 0 0 -1rem;
+      width: 40rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box img {
+      width: 50rem;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(3rem + 7vw);
+      line-height: 11rem;
+      margin: auto 0;
+   }
+
+   .visitUsContent .btn {
+      margin-top: 8rem;
+      padding: 4rem 8rem;
+      font-size: calc(1.8rem + 1.75vw);
+   }
+
+   #footer h2 a {
+      font-size: calc(11rem + 8vw);
+      word-spacing: 0;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer ---------------------- */
+   .subFooterContent,
+   .subFooterContent .contentBottom {
+      align-items: center;
+      justify-content: center;
+      font-size: calc(0.8rem + 0.81vw);
+   }
+
+   .subFooterContent .contentTop {
+      flex: 1.4;
+   }
+
+   .subFooterContent .contentBottom {
+      flex: 1.5;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .social li {
+      padding: 0 1rem 0 1rem;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 40%;
+   }
+}
+
+@media (min-width: 1440px) and (max-width: 1514px) {
+   .container {
+      margin: auto;
+      width: 95%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 90%;
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(4.5rem + 4vw);
+   }
+
+   /* Hero text top */
+   .heroText2 {
+      margin: -45rem 0 0 0;
+   }
+
+   /* Hero image */
+   .heroContent img {
+      margin: -5rem auto 0 auto;
+      width: 60%;
+   }
+
+   .heroContent .contentBottom p {
+      padding: 32rem 29rem 0 29rem;
+      font-size: calc(1.3rem + 0.382vw);
+   }
+
+   .lead {
+      font-size: calc(2rem + 6vw);
+      line-height: 12rem;
+   }
+
+   .galleryContent {
+      margin: 0 0 0 4rem;
+      gap: 2rem;
+   }
+   .galleryContent h3 {
+      line-height: 7rem;
+      font-size: calc(3rem + 4.5vw);
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 5rem;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 22%;
+      margin-left: 0;
+      margin-top: 2em;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 6%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 0;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 8rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 85%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -9%;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      bottom: -9%;
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Workshop ---------------------- */
+   /* Large image after hero */
+   #worhshop {
+      margin-top: 4rem;
+   }
+
+   .worhshopContent {
+      padding: 2rem 0;
+   }
+
+   /* ---------------------- Section: Celebrate ---------------------- */
+   .celebrateContent .contentBottom {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 2rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box {
+      width: 40%;
+      position: relative;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box {
+      width: 40%;
+      position: relative;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box img {
+      width: 45rem;
+      text-align: center;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:first-child img {
+      margin: 8rem 0 0 3rem;
+      /* position: absolute;
+   top: 4%; */
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+      margin: -19rem 0 0 15rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+      margin: -12rem 0 0 3rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+      margin: -18rem 0 0 8rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+      margin: 4rem 0 3rem -13rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+      margin: -2.5rem 0 0 -1rem;
+      width: 40rem;
+   }
+
+   .celebrateContent .contentBottom .imgGallery2 .box img {
+      width: 50rem;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(3rem + 7vw);
+      line-height: 11rem;
+      margin: auto 25rem;
+   }
+
+   .visitUsContent .btn {
+      margin-top: 8rem;
+      padding: 4rem 8rem;
+      font-size: calc(1.8rem + 1.75vw);
+   }
+
+   #footer h2 a {
+      font-size: calc(11rem + 8vw);
+      word-spacing: 0;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 30%;
+   }
+}
+
+@media (min-width: 1515px) and (max-width: 1869px) {
+   .container {
+      margin: auto;
+      width: 95%;
+   }
+
+   .container2 {
+      width: 90%;
+   }
+
+   .container3 {
+      width: 90%;
+   }
+
+   /* Hero text */
+   .heroText,
+   .heroText2 {
+      font-size: calc(4.5rem + 4vw);
+   }
+
+   .heroContent .contentBottom p {
+      padding: 12rem 32rem 0 32rem;
+   }
+
+   .galleryContent {
+      margin: 0 0 0 4rem;
+      gap: 2rem;
+   }
+   .galleryContent h3 {
+      line-height: 7rem;
+      font-size: calc(3rem + 4.5vw);
+   }
+
+   .galleryContent img {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:first-child,
+   .galleryContent .contentTop .box:nth-child(3) {
+      width: 100%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) {
+      margin-top: 5rem;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) {
+      width: 100%;
+      height: 22%;
+      margin-left: 0;
+      margin-top: 2em;
+   }
+
+   .galleryContent .contentTop .box:first-child h3 {
+      left: 6%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(2) h3,
+   .galleryContent .contentBottom .box:first-child h3 {
+      left: 0%;
+   }
+
+   .galleryContent .contentTop .box:nth-child(3) h3 {
+      left: 0;
+   }
+
+   /* Gallery Content Bottom */
+   /* right Images */
+   .galleryContent .contentBottom {
+      margin-top: 8rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child,
+   .galleryContent .contentBottom .box:last-child {
+      width: 85%;
+   }
+
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 3rem;
+   }
+
+   .galleryContent .contentBottom .box:first-child h3 {
+      bottom: -9%;
+   }
+
+   .galleryContent .contentBottom .box:last-child h3 {
+      bottom: -9%;
+      left: 0%;
+   }
+
+   /* ---------------------- Section: Visit Us ---------------------- */
+   .visitUsContent p {
+      font-size: calc(2rem + 4vw);
+      margin: auto 25rem;
+   }
+
+   #footer h2 a {
+      font-size: calc(11rem + 8vw);
+      word-spacing: 0;
+      letter-spacing: 0;
+   }
+
+   /* ---------------------- Section: Sub Footer 2---------------------- */
+   .subFooter2Content .contentTop {
+      width: 30%;
+   }
+}
+/******************************************
+/* Large Desktops & above
+/*******************************************/
+@media screen and (min-width: 2001px) {
+   /* .galleryContent .box {
+      margin-bottom: 10rem;
+   } */
+
+   .galleryContent .contentTop .box:nth-child(2),
+   .galleryContent .contentBottom .box:last-child {
+      margin-top: 8rem;
+   }
+}
+
+/* Mobile: Typically around 767px
+Tablet: Typically around 768px to 1023px
+Tablet landscape: Typically around 768px to 1024px width.
+Small Desktop: Typically around 1024px to 1279px
+Medium Desktop: Typically around 1280px to 1439px
+Large Desktop: Typically around 1440px and above */

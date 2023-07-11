@@ -1,0 +1,674 @@
+/* Pixel to REM COnverter -- https://nekocalc.com/px-to-rem-converter */
+/* Anything body[data-theme="dark"] is for dark theme */
+
+/* ---------------------- Color ---------------------- */
+:root {
+   --bgDark: #010101;
+   --bgDarkAccent: #141414;
+   --bgLight: #f9f5ed;
+   --bgAccent: #e6ded0;
+   --textDark: #fff;
+   --textLight: #010101;
+}
+
+/* ---------------------- Reset ---------------------- */
+* {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+html {
+   font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* Scroll Bar */
+html::-webkit-scrollbar {
+   width: 2rem;
+   background: var(--bgAccent);
+}
+
+html::-webkit-scrollbar-thumb {
+   background: #c7a56bd3;
+   border-radius: 0.5rem;
+}
+
+/* ---------------------- General Styling ---------------------- */
+body {
+   font-family: "vigosamine", sans-serif;
+   font-size: 1.6rem;
+   font-weight: 400;
+   line-height: 1.5;
+   margin: 0;
+   overflow-x: hidden;
+}
+
+/* Default Light theme */
+body[data-theme="light"] {
+   color: var(--textLight);
+   background: var(--bgLight);
+}
+
+/* Dark theme */
+body[data-theme="dark"] {
+   background: var(--bgDark);
+   color: var(--textDark);
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style: none;
+}
+
+p,
+#address,
+#collection {
+   font-family: "Helvetica Neue", sans-serif;
+   line-height: 1.5;
+   font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+   margin: 0;
+}
+
+/* ---------------------- Container ---------------------- */
+.container {
+   margin: auto;
+   width: 90%;
+}
+
+.container2 {
+   margin: auto;
+   width: 53%;
+}
+
+.container3 {
+   margin: auto;
+   width: 85%;
+}
+
+/* ---------------------- Button ---------------------- */
+
+/* ---------------------- Layout Styling ---------------------- */
+
+/* ---------------------- Header ---------------------- */
+header {
+   padding: 3rem 0;
+}
+
+.headerContent ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* ---------------------- Logo ---------------------- */
+#logo a {
+   color: var(--textLight);
+   font-size: 4rem;
+   text-transform: uppercase;
+}
+
+body[data-theme="dark"] #logo a {
+   color: var(--textDark);
+}
+
+/* ---------------------- Collection ---------------------- */
+#collection,
+#jstoggle,
+.heroText,
+.heroText2,
+.lead,
+.headingP,
+.btn,
+#footer {
+   text-transform: uppercase;
+}
+
+/* ---------------------- light and dark theme toggle btn ---------------------- */
+#jstoggle {
+   display: flex;
+   align-items: center;
+}
+
+.checkbox {
+   opacity: 0;
+   position: absolute;
+}
+
+.checkbox-label {
+   margin-left: 1.5rem;
+   background-color: var(--bgAccent);
+   height: 4rem;
+   width: 0.1rem;
+   border-radius: 50px;
+   position: relative;
+   padding: 0.313rem;
+   cursor: pointer;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.checkbox-label .ball {
+   background: var(--textLight);
+   width: 1.375rem;
+   height: 1.375rem;
+   position: absolute;
+   right: -0.4rem;
+   top: 0rem;
+   border-radius: 50%;
+   transition: transform 0.2s linear;
+}
+
+body[data-theme="dark"] .checkbox-label .ball {
+   background: var(--textDark);
+   transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+   transform: translateY(2.5rem);
+}
+
+/* ---------------------- Mobile nav ---------------------- */
+.mobile {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.mobile-menu-icon,
+.mobile #logo {
+   display: none;
+   cursor: pointer;
+   z-index: 2;
+   transition: 0.4s;
+}
+
+/* Hamburger menu */
+.mobile-menu-icon div {
+   display: block;
+   background: var(--textLight);
+   height: 0.1849rem;
+   width: 1.4rem;
+   margin-bottom: 0.2rem;
+   border-radius: 0.5rem;
+   transition: 0.4s all;
+}
+
+body[data-theme="dark"] .mobile-menu-icon div {
+   background: var(--textDark);
+}
+
+/* Hamburger menu animation on click*/
+.move .line1 {
+   transform: rotate(-45deg) translate(-0.03rem, 0.5rem);
+}
+
+.move .line2 {
+   opacity: 0;
+}
+
+.move .line3 {
+   transform: rotate(45deg) translate(-0.03rem, -0.5rem);
+}
+
+/* ---------------------- Section: Hero Styling ---------------------- */
+#hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   /* height: 100vh; */
+   padding: 15rem 0;
+}
+
+.headerContent .contentTop {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   line-height: -1rem;
+   text-align: center;
+}
+
+/* Hero text */
+.heroText,
+.heroText2 {
+   text-align: center;
+   font-size: 12.4rem;
+   font-weight: 400;
+   margin: 0;
+   letter-spacing: -3%;
+   word-spacing: -0.8rem;
+}
+
+/* Hero text behind */
+/* .heroText {
+   z-index: 1;
+} */
+
+/* Hero text top */
+.heroText2 {
+   display: block;
+   z-index: 2;
+   margin: -25rem 0 0 0;
+}
+
+/* Hero image */
+.heroContent img {
+   margin: -7.5rem auto 0 auto;
+   display: block;
+   width: 44rem;
+   z-index: 1;
+}
+
+.heroContent .contentBottom p {
+   text-align: center;
+   font-weight: 500;
+   padding: 8rem 6rem 0 6rem;
+   line-height: 2.4rem;
+}
+
+/* ---------------------- Section: Image ---------------------- */
+/* Large image after hero */
+#image img {
+   width: 100%;
+}
+
+/* ---------------------- Section: About ---------------------- */
+#about {
+   margin: 7rem 0;
+}
+
+.aboutContent,
+.masterpieceContent,
+.worhshopContent {
+   display: flex;
+   justify-content: space-between;
+}
+
+.aboutContent .contentTop,
+.aboutContent .contentBottom,
+.worhshopContent .contentTop {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.aboutContent .contentTop,
+.masterpieceContent .contentTop,
+.worhshopContent .contentTop {
+   flex: 1.5;
+}
+.aboutContent .contentBottom,
+.masterpieceContent .contentBottom,
+.worhshopContent .contentBottom {
+   flex: 1;
+}
+
+.lead {
+   font-size: 9.6rem;
+   letter-spacing: -3%;
+   line-height: 9.6rem;
+   font-weight: 400;
+}
+
+/* Content Bottem */
+.headingP {
+   font-weight: 500;
+   line-height: 2rem;
+   margin-bottom: 5rem;
+}
+
+.largeP {
+   font-size: 3rem;
+   line-height: 3.2rem;
+   letter-spacing: 0.1rem;
+   word-spacing: 0.9rem;
+}
+
+/* ---------------------- Section: Gallery Styling ---------------------- */
+.galleryContent {
+   display: flex;
+   justify-content: center;
+   margin: 0 0 0 10rem;
+   /* gap: 1rem; */
+}
+
+.galleryContent .box {
+   margin-bottom: 9.6rem;
+}
+
+.galleryContent h3 {
+   line-height: 8rem;
+   letter-spacing: -0.1rem;
+}
+
+/* left Images */
+/* Gallery Content Top */
+.galleryContent .contentTop,
+.galleryContent .contentBottom {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   flex: 1;
+}
+
+.galleryContent .contentTop .box:first-child,
+.galleryContent .contentTop .box:nth-child(3) {
+   width: 90%;
+   position: relative;
+}
+
+/* .galleryContent .contentTop .box:first-child {
+   margin: 0 0 14rem;
+} */
+
+.galleryContent .contentTop .box:nth-child(3) {
+   margin-top: 9.6rem;
+}
+
+.galleryContent .contentTop .box:nth-child(2) {
+   position: relative;
+   width: 65rem;
+   height: 41rem;
+   margin: 4rem 0 5rem 5rem;
+}
+
+.galleryContent .contentTop .box:first-child h3 {
+   position: absolute;
+   bottom: -19%;
+   left: 23%;
+}
+
+.galleryContent .contentTop .box:nth-child(3) h3 {
+   position: absolute;
+   bottom: -19%;
+   left: 18%;
+}
+
+/* Gallery Content Bottom */
+/* right Images */
+.galleryContent .contentBottom {
+   margin-top: 25rem;
+}
+
+.galleryContent .contentBottom .box:first-child,
+.galleryContent .contentBottom .box:last-child {
+   width: 70%;
+   position: relative;
+   /* width: 54.2rem; */
+   /* height: 72.1rem; */
+}
+
+.galleryContent .contentBottom .box:last-child h3 {
+   /* margin: -15.5rem 0 0 -4.6rem; */
+   position: absolute;
+   bottom: -12%;
+   left: -10%;
+}
+
+.galleryContent .contentTop .box:nth-child(2) h3,
+.galleryContent .contentBottom .box:first-child h3 {
+   /* margin: -6rem 0 0 -4.6rem; */
+   position: absolute;
+   bottom: -11%;
+   left: -8%;
+}
+
+.galleryContent img {
+   width: 93%;
+}
+
+/* ---------------------- Section: Workshop ---------------------- */
+/* Large image after hero */
+#worhshop {
+   background: url(../img/workshop.png) center center/cover no-repeat;
+   width: 100%;
+   color: var(--textDark);
+   margin-top: 7rem;
+}
+
+.worhshopContent {
+   padding: 9.6rem 0;
+}
+
+.worhshopContent .contentBottom {
+   margin-top: 28rem;
+}
+
+/* ---------------------- Section: Celebrate ---------------------- */
+#celebrate {
+   margin: 7rem 0 4rem 0;
+   text-align: center;
+}
+
+.celebrateContent .contentBottom {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   gap: 4rem;
+}
+
+.celebrateContent .contentBottom .imgGallery .box {
+   width: 45%;
+   position: relative;
+}
+
+.celebrateContent .contentBottom .imgGallery2 .box {
+   width: 50%;
+   position: relative;
+}
+
+.celebrateContent .contentBottom .imgGallery .box img {
+   width: 45.3rem;
+   text-align: center;
+}
+
+.celebrateContent .contentBottom .imgGallery .box:first-child img {
+   margin: 8rem 0 0 10rem;
+   /* position: absolute;
+   top: 4%; */
+}
+
+.celebrateContent .contentBottom .imgGallery .box:nth-child(2) img {
+   margin: -19rem 0 0 32rem;
+}
+
+.celebrateContent .contentBottom .imgGallery .box:nth-child(3) img {
+   margin: -12rem 0 0 0rem;
+}
+
+.celebrateContent .contentBottom .imgGallery .box:nth-child(4) img {
+   margin: -18rem 0 0 25rem;
+}
+
+.celebrateContent .contentBottom .imgGallery2 .box:first-child img {
+   margin: 4rem 0 3rem -13rem;
+}
+
+.celebrateContent .contentBottom .imgGallery2 .box:nth-child(2) img {
+   margin: 0;
+}
+
+.celebrateContent .contentBottom .imgGallery2 .box img {
+   width: 54.2rem;
+}
+
+/* ---------------------- Section: Visit Us ---------------------- */
+#visitUs {
+   margin: 7rem 0;
+   text-align: center;
+}
+
+.visitUsContent .contentTop {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.visitUsContent p {
+   margin: auto 39rem;
+   font-size: 9.6rem;
+   line-height: 9.6rem;
+}
+
+.visitUsContent p span {
+   font-family: "vigosamine", sans-serif;
+}
+
+.visitUsContent .btn {
+   font-family: "Helvetica Neue", sans-serif;
+   font-weight: 400;
+   color: var(--textLight);
+   margin-top: 5.6rem;
+   border: 0.1rem solid var(--textLight);
+   border-radius: 5rem;
+   padding: 2.6rem 4rem;
+   font-size: 2.4rem;
+   line-height: 2rem;
+   transition: all 0.4s;
+}
+
+body[data-theme="dark"] .visitUsContent .btn {
+   color: var(--textDark);
+   border: 0.1rem solid var(--textDark);
+}
+
+/* ---------------------- Section: Footer ---------------------- */
+#footer {
+   margin-top: 7rem;
+   text-align: center;
+}
+
+#footer .footerContent,
+.subFooterContent {
+   border-bottom: 0.1rem solid var(--textLight);
+}
+
+body[data-theme="dark"] #footer .footerContent,
+body[data-theme="dark"] .subFooterContent {
+   border-bottom: 0.1rem solid var(--textDark);
+}
+
+#footer h2 a {
+   font-size: 25rem;
+   word-spacing: 3rem;
+   letter-spacing: 1rem;
+   font-weight: 400;
+   color: var(--textLight);
+}
+
+body[data-theme="dark"] #footer h2 a {
+   color: var(--textDark);
+}
+
+/* ---------------------- Section: Sub Footer ---------------------- */
+#subFooter,
+#subFooter2 {
+   margin: 1rem 0;
+}
+
+.subFooterContent,
+.subFooter2Content .contentTop {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.subFooterContent .contentTop {
+   flex: 3;
+}
+
+.subFooterContent .contentBottom {
+   flex: 1;
+   display: flex;
+   justify-content: space-between;
+}
+
+.social {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex: 0.7;
+}
+
+.social a {
+   font-family: "Helvetica Neue", sans-serif;
+   color: var(--textLight);
+}
+
+body[data-theme="dark"] .social a {
+   color: var(--textDark);
+}
+
+/* ---------------------- Section: Sub Footer 2---------------------- */
+.subFooter2Content .contentTop {
+   margin: auto;
+   width: 22%;
+}
+
+.subFooter2Content a {
+   text-decoration: underline;
+   color: var(--textLight);
+}
+
+body[data-theme="dark"] .subFooter2Content a {
+   color: var(--textDark);
+}
+
+.subFooter2Content span {
+   background: var(--textLight);
+   height: 5rem;
+   width: 0.1rem;
+}
+
+body[data-theme="dark"] .subFooter2Content span {
+   background: var(--textDark);
+}
+
+/* ---------------------------------- Scroll to Top ---------------------------------- */
+.scroll-top {
+   position: fixed;
+   bottom: -100rem;
+   right: 3rem;
+   z-index: 2;
+   cursor: pointer;
+   color: var(--textLight);
+   transition: all 0.4s;
+   font-size: 4rem;
+}
+
+body[data-theme="dark"] .scroll-top {
+   color: var(--textDark);
+}
+
+.scroll-top:hover,
+.visitUsContent .btn:hover {
+   transform: translateY(-8px);
+   transition: all 0.4s;
+}
+
+.scroll-active {
+   bottom: 4rem;
+   transition: 0.4s all ease-in-out;
+}
+
+/* hero waving hand */
+
+/* Hero Big text */
+
+/* Hero button */
