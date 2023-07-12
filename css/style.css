@@ -188,12 +188,15 @@ body[data-theme="dark"] .checkbox-label .ball {
    align-items: center;
 }
 
-.mobile-menu-icon,
-.mobile #logo {
+.mobile-menu-icon {
    display: none;
    cursor: pointer;
    z-index: 2;
    transition: 0.4s;
+}
+
+.mobile #logo {
+   display: none;
 }
 
 /* Hamburger menu */
