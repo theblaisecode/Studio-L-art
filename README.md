@@ -1,4 +1,4 @@
-# Studio L'art Gallery Website
+# Studio L'art Art Gallery Website
 An art gallery website (fully responsive on all screen sizes)
 
 Live Project - [https://theblaisecode.github.io/Studio-L-art/](https://theblaisecode.github.io/Studio-L-art/)
