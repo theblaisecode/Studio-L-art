@@ -15,4 +15,6 @@ HTML, CSS, JS
 
 ## Authors
 
-- [@theblaisecode](https://github.com/theblaisecode)
+- Github - [@theblaisecode](https://github.com/theblaisecode)
+- Twitter - [@theblaisecode](https://twitter.com/theblaisecode)
+- LinkedIn - [@theblaisecode](https://www.linkedin.com/in/theblaisecode)
