@@ -15,6 +15,13 @@ HTML, CSS, JS
 
 ## Authors
 
+**Designer**
+- Twitter - [@HAFEEZOLAMIDE1](https://twitter.com/HAFEEZOLAMIDE1)
+
+<br/>
+
+**Developer**
+
 - Github - [@theblaisecode](https://github.com/theblaisecode)
 - Twitter - [@theblaisecode](https://twitter.com/theblaisecode)
 - LinkedIn - [@theblaisecode](https://www.linkedin.com/in/theblaisecode)
